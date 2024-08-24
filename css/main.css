@@ -1,0 +1,79 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #000000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overscroll-behavior: contain;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  padding: 0 1rem;
+}
+
+.Instraction_heading {
+   margin-top: 10vh;
+}
+
+.Instraction_heading span{
+  color: hsl(0 0% 100% / .2);
+  animation: Blink linear 1s infinite;
+}
+
+@keyframes Blink {
+  0% {  
+    color: hsl(0 0% 100% / .2);
+  }
+  50% {
+    color: hsl(0 0% 100% / 1);
+  }
+  100% {  
+    color: hsl(0 0% 100% / .2);
+  }
+}
+
+.scroll_reveal {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 1.8em;
+  padding-top: 10vh;
+  padding-bottom: 50vh;
+}
+
+.scroll_reveal span {
+  color: hsl(0 0% 100% / .2);
+  background-image: linear-gradient(90deg, red, blue);
+  background-clip: text;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+}
+
+.scroll_reveal h2 span {
+  animation-range-start: 76.5vh;
+  animation-range-end: 80vh;
+}
+
+.scroll_reveal p span {
+  animation-range-start: 75.4vh;
+  animation-range-end: exit 1rem;
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+}
