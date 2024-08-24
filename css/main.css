@@ -18,14 +18,25 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  padding: 0 1rem;
+  padding: 0 50vh;
+}
+
+.Instraction_heading-start, .Instraction_heading-end  {
+  text-align: center;
+  font-size: 16px;
+  color: hsl(0 0% 100% / .2);
+  animation: Blink linear 1s infinite;
+}
+
+.Instraction_heading-start {
+  margin-top: 10vh;
+}
+
+.Instraction_heading-end {
+  padding-bottom : 10vh;
 }
 
 .Instraction_heading {
-   margin-top: 10vh;
-}
-
-.Instraction_heading span{
   color: hsl(0 0% 100% / .2);
   animation: Blink linear 1s infinite;
 }
@@ -49,7 +60,7 @@ body {
   gap: 10px;
   line-height: 1.8em;
   padding-top: 10vh;
-  padding-bottom: 50vh;
+  padding-bottom: 10vh;
 }
 
 .scroll_reveal span {
@@ -63,17 +74,33 @@ body {
 }
 
 .scroll_reveal h2 span {
-  animation-range-start: 76.6vh;
+  animation-range-start: 77.8vh;
   animation-range-end: 80vh;
 }
 
 .scroll_reveal p span {
-  animation-range-start: 75.4vh;
-  animation-range-end: exit 1rem;
+  animation-range-start: 76vh;
+  animation-range-end: exit 23vh;  
 }
 
 @keyframes scroll-reveal {
   to {
     background-size: 100% 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding: 0 2rem;
+  }
+  .scroll_reveal p span {
+    animation-range-start: 75.4vh;
+    animation-range-end: exit 15vh;  
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 2rem;
   }
 }
